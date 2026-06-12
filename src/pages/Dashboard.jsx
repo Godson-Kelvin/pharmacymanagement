@@ -13,7 +13,7 @@ import {
     ShoppingCart,
     TrendingUp,
     AlertTriangle,
-    DollarSign,
+    Wallet,
 } from "lucide-react";
 import {
     LineChart,
@@ -149,8 +149,8 @@ export default function Dashboard() {
         },
         {
             title: "Total Revenue",
-            value: `$${stats.revenue.toFixed(2)}`,
-            icon: DollarSign,
+            value: `₵${stats.revenue.toFixed(2)}`,
+            icon: Wallet,
             color: "bg-purple-500",
             bg: "bg-purple-50",
             text: "text-purple-600",
@@ -265,7 +265,7 @@ export default function Dashboard() {
                                         {sale.items?.length || 0} items
                                     </td>
                                     <td className="py-3 px-4 text-sm font-medium text-gray-800">
-                                        ${sale.total?.toFixed(2)}
+                                        ₵{sale.total?.toFixed(2)}
                                     </td>
                                     <td className="py-3 px-4 text-sm text-gray-500">
                                         {sale.createdAt?.toDate

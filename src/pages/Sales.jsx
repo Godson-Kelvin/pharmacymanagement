@@ -172,7 +172,7 @@ export default function Sales() {
             }
 
             toast.success(
-                `Sale completed! Total: $${calculateTotal().toFixed(2)}`
+                `Sale completed! Total: ₵${calculateTotal().toFixed(2)}`
             );
             setCart([]);
             setCustomerName("");
@@ -299,7 +299,7 @@ export default function Sales() {
                         <div>
                             <p className="text-sm text-gray-500">Total Revenue</p>
                             <p className="text-2xl font-bold text-gray-800">
-                                ${totalRevenue.toFixed(2)}
+                                ₵{totalRevenue.toFixed(2)}
                             </p>
                         </div>
                     </div>
@@ -433,13 +433,13 @@ export default function Sales() {
                                         <div className="flex flex-col gap-1">
                                             {sale.items?.map((item, idx) => (
                                                 <span key={idx} className="text-xs">
-                                                    {item.quantity}x {item.name} (${item.subtotal?.toFixed(2)})
+                                                    {item.quantity}x {item.name} (₵{item.subtotal?.toFixed(2)})
                                                 </span>
                                             ))}
                                         </div>
                                     </td>
                                     <td className="py-3 px-4 text-sm font-medium text-gray-800">
-                                        ${sale.total?.toFixed(2)}
+                                        ₵{sale.total?.toFixed(2)}
                                     </td>
                                     <td className="py-3 px-4 text-sm text-gray-500">
                                         {sale.createdAt?.toDate
@@ -515,7 +515,7 @@ export default function Sales() {
                                                 {product.name}
                                             </p>
                                             <p className="text-xs text-gray-500">
-                                                Stock: {product.quantity} | ${product.price?.toFixed(2)}
+                                                Stock: {product.quantity} | ₵{product.price?.toFixed(2)}
                                             </p>
                                         </div>
                                         <Plus size={18} className="text-green-600 shrink-0" />
@@ -556,7 +556,7 @@ export default function Sales() {
                                                 {item.name}
                                             </p>
                                             <p className="text-xs text-gray-500">
-                                                ${item.price?.toFixed(2)} each
+                                                ₵{item.price?.toFixed(2)} each
                                             </p>
                                         </div>
                                         <div className="flex items-center gap-2">
@@ -610,7 +610,7 @@ export default function Sales() {
                                         Total:
                                     </span>
                                     <span className="text-2xl font-bold text-green-600">
-                                        ${calculateTotal().toFixed(2)}
+                                        ₵{calculateTotal().toFixed(2)}
                                     </span>
                                 </div>
                                 <button

@@ -323,7 +323,7 @@ export default function Inventory() {
                                         )}
                                     </td>
                                     <td className="py-3 px-4 text-sm text-gray-800 font-medium">
-                                        ${product.price?.toFixed(2)}
+                                        ₵{product.price?.toFixed(2)}
                                     </td>
                                     <td className="py-3 px-4 text-sm text-gray-600">
                                         {product.supplier || "-"}
@@ -415,7 +415,7 @@ export default function Inventory() {
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                                        Price ($) *
+                                        Price (₵) *
                                     </label>
                                     <input
                                         type="number"
